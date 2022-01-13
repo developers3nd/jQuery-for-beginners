@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event</title>
+    <script src="js/jquery.js"></script>
+
+    <style>
+        #display{
+            width: 100%;
+            height: 150px;
+            background-color: rebeccapurple;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    
+      <!--
+
+         click 
+         hide 
+         show
+         toggle
+         slideup
+         slidedown
+         fadein
+         fadeout
+         fadetoggle
+         keyup
+         keydown
+         mousemove
+         mouseout
+         mouseover
+         on
+         scroll
+
+        -->
+
+
+        <button type="button" id="btnclick"> click</button>
+        <button type="button" id="btnhide"> hide</button>
+        <button type="button" id="btnshow"> show</button>
+        <button type="button" id="btntoggle"> toggle</button>
+        <button type="button" id="btnslideup"> slideup</button>
+        <button type="button" id="btnslidedown"> slidedown</button>
+        <button type="button" id="btnslidetoggler"> slide toggler</button>
+        <button type="button" id="btnfadetoggle"> fadetoggle</button>
+      
+
+
+        <div id="display">
+            <h1>display</h1>
+        </div>
+
+
+        
+
+        <script>
+            $(document).ready(function(){
+
+                $('#btnclick').click(function(){
+                     alert('alert');
+                });
+
+                $('#btnhide').click(function(){
+                     $("#display").hide();
+                });
+
+                $('#btnshow').click(function(){
+                    $("#display").show();
+                });
+
+                $('#btntoggle').click(function(){
+                    $("#display").toggle();
+                });
+
+                $('#btnslideup').click(function(){
+                    $("#display").slideUp();
+                });
+
+                $('#btnslidedown').click(function(){
+                    $("#display").slideDown();
+                });
+
+                $('#btnslidetoggler').click(function(){
+                    $("#display").slideToggle();
+                });
+
+                $('#btnfadetoggle').click(function(){
+                    $("#display").fadeToggle(3000);
+                });
+                
+
+                var x = 0;
+                $("#display").mousemove(function(){
+                    
+                    $("h1").html(x++);
+
+                })
+            })
+        </script>
+    </body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery.js"></script>
+
+    <link rel="stylesheet" href="alertifyjs/css/alertify.min.css">
+    <script src="alertifyjs/alertify.min.js"></script>
+
+</head>
+<body>
+    
+     <form>
+        Price: <input type="number" id="price" > <br> <br>
+        Qty: <input type="number" id="qty"> <br><br>
+
+        <button id="btnform" type="button"> Calculate </button> <br><br>
+        Total: <input type="number" id="total"> <br><br>
+        Rs.: <div id="tot_div"></div> <br><br>
+    
+    </form>
+
+
+
+     <script>
+         $(document).ready(function(){
+
+             $("#btnform").click(function(){
+        
+                var price = $("#price").val();
+                var qty = $("#qty").val();
+
+                if(price == '' || qty == '' ){
+                   // alert('please fill all field');
+                   alertify.error('please fill all field');
+                }else{
+
+                    alertify.success('Thank You');
+
+                    var total = price * qty;
+
+                    // input data set
+                    $("#total").val(total);
+                    // div data set
+                    $("#tot_div").html(total);
+
+                   
+
+                }
+
+               
+
+             })
+           
+         })
+     </script>
+
+</body>
+</html>

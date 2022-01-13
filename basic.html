@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>basic</title>
+
+    <script src="js/jquery.js"></script>
+</head>
+<body>
+    
+     
+     <button type="button"  onclick="test()">click 1</button>
+     <button type="button" id="btntest" >click 2</button>
+
+     <div id="res"></div>
+    
+     <script>
+         function test(){
+             alert('testing');
+         }
+
+
+         $(document).ready(function(){
+
+            $("#btntest").click(function(){
+                alert('testing jquery');
+            })
+
+
+         })
+         
+     </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery.js"></script>
+</head>
+<body>
+    
+     Price: <input type="number" id="price" value="">  <br>
+     Qty: <input type="number" id="qty"> <br>
+     Total: <input type="number" id="total"> <br>
+
+     <script>
+         $(document).ready(function(){
+             var qty = 0;
+             var price = 0;
+             var total = 0;
+
+              $("#price").keyup(function(){
+                  price = $(this).val();
+              })
+
+              $("#qty").keyup(function(){
+                 qty = $(this).val();
+                 total = qty  * price;
+                 $("#total").val(total);
+                 
+              })
+
+             
+             
+         })
+     </script>
+
+</body>
+</html>
